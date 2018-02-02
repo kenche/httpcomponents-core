@@ -83,8 +83,11 @@
         <configuration>
           <instructions>
             <Bundle-Name>Apache ${pom.name}</Bundle-Name>
-            <Bundle-SymbolicName>${pom.groupId}.httpcore</Bundle-SymbolicName>
-            <_exportcontents>org.apache.http.*</_exportcontents>
+            <Bundle-SymbolicName>${pom.groupId}.httpcore.ctt</Bundle-SymbolicName>
+            <_exportcontents>org.apache.http.*;version=${project.version}</_exportcontents>
+			<Import-Package>
+javax.net.ssl,org.apache.http;version="[4.0.1,4.0.2)",org.apache.http.entity;version="[4.0.1,4.0.2)",org.apache.http.impl;version="[4.0.1,4.0.2)",org.apache.http.impl.entity;version="[4.0.1,4.0.2)",org.apache.http.impl.io;version="[4.0.1,4.0.2)",org.apache.http.impl.nio;version="[4.0.1,4.0.2)",org.apache.http.impl.nio.codecs;version="[4.0.1,4.0.2)",org.apache.http.impl.nio.reactor;version="[4.0.1,4.0.2)",org.apache.http.io;version="[4.0.1,4.0.2)",org.apache.http.message;version="[4.0.1,4.0.2)",org.apache.http.nio;version="[4.0.1,4.0.2)",org.apache.http.nio.entity;version="[4.0.1,4.0.2)",org.apache.http.nio.params;version="[4.0.1,4.0.2)",org.apache.http.nio.protocol;version="[4.0.1,4.0.2)",org.apache.http.nio.reactor;version="[4.0.1,4.0.2)",org.apache.http.nio.util;version="[4.0.1,4.0.2)",org.apache.http.params;version="[4.0.1,4.0.2)",org.apache.http.protocol;version="[4.0.1,4.0.2)",org.apache.http.util;version="[4.0.1,4.0.2)"
+			</Import-Package>
             <Embed-Dependency>*;scope=compile|runtime;inline=false</Embed-Dependency>
           </instructions>
         </configuration>
